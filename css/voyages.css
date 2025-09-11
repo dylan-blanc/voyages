@@ -5,9 +5,20 @@
 
 
 html {
-  background: linear-gradient(to bottom, rgb(79, 172, 234), rgb(89, 237, 163));
-  height: 2000px;
-  width: 100%;
+    background: white;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main,
+section {
+    flex: 1 0 auto;
 }
 
 header {
@@ -16,10 +27,9 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, rgb(8, 8, 103), white, rgb(215, 2, 2) opacity(1));
+    background-color: white opacity(1); 
     font-size: 1.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    z-index: 1000;
 }
 
 .header-bar {
@@ -28,7 +38,8 @@ header {
     height: 100%;
     padding: 0 16px;
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* gauche | centre | droite */
+    grid-template-columns: 1fr auto 1fr;
+    /* gauche | centre | droite */
     align-items: center;
     gap: 16px;
 }
@@ -41,18 +52,28 @@ header {
     list-style: none;
 }
 
-.nav-left ul { justify-content: flex-start; }
-.nav-right ul { justify-content: flex-end; }
+.nav-left ul {
+    justify-content: flex-start;
+}
+
+.nav-right ul {
+    justify-content: flex-end;
+}
 
 header a {
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 8px 12px;
     border-radius: 6px;
     transition: background-color 0.2s ease;
 }
 
-header a:hover { background-color: rgba(255, 255, 255, 0.18); }
+
+.nav-left a:hover,
+.nav-right a:hover {
+    background-color: black;
+    color: white;
+}
 
 .logo {
     display: inline-flex;
@@ -61,13 +82,14 @@ header a:hover { background-color: rgba(255, 255, 255, 0.18); }
 }
 
 .logo img {
-    height: 90px;
-    width: auto;
+    height: 120px;
+    width: 400px;
 }
 
 /* Ajuste le contenu sous le header fixe */
-main, section:first-of-type { 
-    padding-top: 140px; 
+main,
+section:first-of-type {
+    padding-top: 140px;
 }
 
 /* Mobile */
@@ -76,7 +98,104 @@ main, section:first-of-type {
         grid-template-columns: 1fr auto 1fr;
         padding: 0 8px;
     }
-    header { font-size: 1rem; height: 100px; }
-    .logo img { height: 70px; }
-    .nav-left ul, .nav-right ul { gap: 8px; }
+
+    header {
+        font-size: 1rem;
+        height: 100px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .nav-left ul,
+    .nav-right ul {
+        gap: 8px;
+    }
+}
+
+
+footer {
+    background: linear-gradient(to right, rgb(8, 8, 103), white, rgb(215, 2, 2) opacity(1));
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: solid 4px white;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    padding-right: 50px;
+}
+
+.footer-left {
+    justify-content: flex-start;
+}
+
+.footer-center {
+    justify-content: center;
+}
+
+.footer-right {
+    justify-content: flex-end;
+}
+
+.btn-github {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #212121;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid white;
+    transition: 0.3s;
+    font-size: 1.1rem;
+    margin-left: 35px;
+}
+
+.btn-github i {
+    padding-right: 8px;
+}
+
+.btn-github:hover {
+    background: white;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.footer-center a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-center a:hover {
+    text-decoration: underline;
+}
+
+.footer-right a {
+    color: black;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: #ff3333;
+    transform: scale(1.2);
 }
