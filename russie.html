@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/voyages.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- HEADER-->
+    <header>
+        <div class="header-bar">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="has-dropdown">
+                        <a href="france.html">France</a>
+                        <ul class="dropdown">
+                            <li><a href="france.html">Paris</a></li>
+                            <li><a href="france.html">Lyon</a></li>
+                            <li><a href="france.html">Bordeaux</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="japon.html">Japon</a>
+                        <ul class="dropdown">
+                            <li><a href="japon.html">Tokyo</a></li>
+                            <li><a href="japon.html">Kyoto</a></li>
+                            <li><a href="japon.html">Osaka</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a class="logo" href="index.html" aria-label="Accueil">
+                <img src="images/logoEDSG.png" alt="Logo">
+            </a>
+            <nav class="nav-right">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="usa.html">Usa</a>
+                        <ul class="dropdown">
+                            <li><a href="usa.html">New York</a></li>
+                            <li><a href="usa.html">Los Angeles</a></li>
+                            <li><a href="usa.html">Chicago</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="russie.html">Russie</a>
+                        <ul class="dropdown">
+                            <li><a href="russie.html">Moscou</a></li>
+                            <li><a href="russie.html">Saint-Pétersbourg</a></li>
+                            <li><a href="russie.html">Novossibirsk</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pays.html">Inconnu</a>
+                        <ul class="dropdown">
+                            <li><a href="pays.html">Lieu1</a></li>
+                            <li><a href="pays.html">Lieu2</a></li>
+                            <li><a href="pays.html">Lieu3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+
+        <article>
+
+        </article>
+
+    </section>
+
+
+    <!-- FOOTER-->
+    <footer>
+        <div class="footer-left">
+            <a href="https://github.com/enzo-cys" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/dylan-blanc" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/sylvain-malbon" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/geoffrey-carpentier" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://github.com/philippe-jodar" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="footer-center fan-links"></div>
+        <div class="footer-right social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script>
+    // Carousel JS
+    document.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('.carousel-item');
+        let current = 0;
+
+        function showItem(index) {
+            items.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+        }
+
+        document.getElementById('nextBtn').onclick = function() {
+            current = (current + 1) % items.length;
+            showItem(current);
+        }
+        document.getElementById('prevBtn').onclick = function() {
+            current = (current - 1 + items.length) % items.length;
+            showItem(current);
+        }
+
+        // Optionnel : Swipe mobile
+        let startX = null;
+        const carouselInner = document.querySelector('.carousel-inner');
+        carouselInner.addEventListener('touchstart', e => {startX = e.touches[0].clientX;});
+        carouselInner.addEventListener('touchend', e => {
+            if(startX !== null) {
+                let delta = e.changedTouches[0].clientX - startX;
+                if (delta < -50) document.getElementById('nextBtn').click();
+                else if (delta > 50) document.getElementById('prevBtn').click();
+                startX = null;
+            }
+        });
+
+        // Formulaire alert
+        document.querySelector('.contact-form').onsubmit = function(e){
+            e.preventDefault();
+            alert('Merci pour votre message !');
+            this.reset();
+        }
+    });
+    </script>
+</body>
+</html>
