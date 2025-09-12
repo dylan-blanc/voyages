@@ -1,0 +1,17 @@
+/* *******************************************************HEADER****************************************************************** */
+
+
+.logo img {
+    height: 70px;
+    width: auto;
+    max-width: 250px;
+}
+
+header {
+    background: linear-gradient(to right, #002654 0% 33%, white 33% 66%, #ce1126 66% 100%);
+    
+}
+
+.nav-left a, .nav-right a {
+    color: white;
+    }
