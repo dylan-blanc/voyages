@@ -82,6 +82,7 @@ header {
   display: flex;
   align-items: center;
   gap: 12px;
+  list-style: none;
 }
 
 .nav-left ul {
@@ -91,7 +92,7 @@ header {
 
 .nav-right ul {
   justify-content: flex-end;
-  gap: 12px;
+  gap: 6px;
 }
 
 header a {
@@ -140,8 +141,8 @@ header a {
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
-  min-width: 180px;
-  padding: 6px 0;
+  min-width: 112px;
+  padding: 6px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
   z-index: 1;
 }
@@ -156,9 +157,9 @@ header a {
 
 .dropdown a {
   display: block;
-  padding: 0 12px;
+  padding: 8px 12px;
   color: #000;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 /* FOOTER */
