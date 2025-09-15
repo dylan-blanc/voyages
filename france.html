@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/france.css" rel="stylesheet" importance="high">
+    <link href="css/voyages.css" rel="stylesheet" importance="low">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <header>
+        <div class="header-bar">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="has-dropdown">
+                        <a href="france.html">France</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">Lyon</a></li>
+                            <li><a href="#">Bordeaux</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="japon.html">Japon</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Tokyo</a></li>
+                            <li><a href="#">Kyoto</a></li>
+                            <li><a href="#">Osaka</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <a class="logo" href="index.html" aria-label="Accueil">
+                <img src="images/logoEDSG.png" alt="Logo">
+            </a>
+            <nav class="nav-right">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="usa.html">Usa</a>
+                        <ul class="dropdown">
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">Los Angeles</a></li>
+                            <li><a href="#">Chicago</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="russie.html">Russie</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Moscou</a></li>
+                            <li><a href="#">Saint-Pétersbourg</a></li>
+                            <li><a href="#">Novosibirsk</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pays.html">Inconnu</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Lieu1</a></li>
+                            <li><a href="#">Lieu2</a></li>
+                            <li><a href="#">Lieu3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="intro">
+        <article>
+            <div>
+                <h1>Bienvenue en France</h1>
+                <p>Un pays riche en histoire, culture et paysages diversifiés.</p>
+                <p>Des châteaux majestueux de la Loire aux plages ensoleillées de la Côte d'Azur, en passant par les
+                    vignobles renommés de Bordeaux et les montagnes pittoresques des Alpes, la France offre une variété
+                    d'expériences inoubliables.</p>
+            </div>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <div class="grid">
+
+                <div class="card">
+                    <div class="card-text">
+                        <h2> Château de Chambord</h2>
+                    </div>
+                    <div class="carousel"
+                        data-images="images/DBchambord.jpg|images/Chambord_Castle_Northwest_facade.jpg|images/Drone-contrast-Chambord-2023-24-1180x550.jpg"
+                        tabindex="0" role="region" aria-label="Carrousel d'images 1">
+                        <button class="nav prev" aria-label="Image précédente"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <img src="images/DBchambord.jpg" alt="Château de Chambord ">
+                        <button class="nav next" aria-label="Image suivante"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-text">
+                        <h2> Château d'Usse</h2>
+                    </div>
+                    <div class="carousel"
+                        data-images="images/DBchateau-dusse-indre-loire.jpg|images/DBdrusse2.jpg|images/DBdusse3.jpg"
+                        tabindex="0" role="region" aria-label="Carrousel d'images 2">
+                        <button class="nav prev" aria-label="Image précédente"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <img src="images/DBchateau-dusse-indre-loire.jpg" alt="Château d'Usse">
+                        <button class="nav next" aria-label="Image suivante"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-text">
+                        <h2> Mont Saint-Michel</h2>
+                    </div>
+                    <div class="carousel"
+                        data-images="images/saintmichel1.jpg|images/saiantmichel2.jpg|images/saintmichel3.jpg"
+                        tabindex="0" role="region" aria-label="Carrousel d'images 3">
+                        <button class="nav prev" aria-label="Image précédente"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <img src="images/saintmichel1.jpg" alt="Mont Saint-Michel">
+                        <button class="nav next" aria-label="Image suivante"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-text">
+                        <h2> Château de Pierrefond</h2>
+                    </div>
+                    <div class="carousel"
+                        data-images="images/pierrefond1.jpg|images/pierrefond2.jpg|images/pierrefond3.png" tabindex="0"
+                        role="region" aria-label="Carrousel d'images 4">
+                        <button class="nav prev" aria-label="Image précédente"><i
+                                class="fa-solid fa-chevron-left"></i></button>
+                        <img src="images/pierrefond1.jpg" alt="Château de Pierrefond">
+                        <button class="nav next" aria-label="Image suivante"><i
+                                class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+    <section>
+        <div class="vignettewrapper">
+            <div class="vignetteplage">
+                <div class="vignette">
+                    <div>
+                        <img src="images/plagetoulon1.jpg" alt="Plage de Toulon">
+                    </div>
+                    <div class="textvignette">
+                        <h3>Plage de Toulon</h3>
+                        <p>BlablalblalbalblalbablaBLAlbalblablalbalblablalba</p>
+                    </div>
+                </div>
+                <div class="vignette">
+                    <div>
+                        <img src="images/plagetoulon2.jpg" alt="Plage de Toulon">
+                    </div>
+                    <div class="textvignette">
+                        <h3>Plage des Sablette</h3>
+                        <p>onkonkonkonkonkonkononkonkonkonkonkonkonkk</p>
+                    </div>
+                </div>
+                <div class="vignette">
+                    <div>
+                        <img src="images/plagetoulon3.jpg" alt="Plage de Toulon">
+                    </div>
+                    <div class="textvignette">
+                        <h3>Plage inconnu</h3>
+                        <p>oukiléooukiléoukiléoukiléukiléoukilé</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="footer-left">
+            <a href="https://github.com/dylan-blanc" class="btn-github" target="_blank"><i class="fab fa-github"></i>
+                GitHub</a>
+        </div>
+
+        <div class="footer-center fan-links">
+        </div>
+
+        <div class="footer-right social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+    <script src="js/france.js" defer></script>
+</body>
+
+</html>
