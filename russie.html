@@ -1,139 +1,307 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Accueil</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="css/voyages.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <!-- HEADER-->
+  <head>
+    <meta charset="utf-8" />
+    <title>Voyage en Russie</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/russie.css" rel="stylesheet" importance="high" />
+    <link href="css/voyages.css" rel="stylesheet" importance="low" />
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <header>
-        <div class="header-bar">
-            <nav class="nav-left">
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li class="has-dropdown">
-                        <a href="france.html">France</a>
-                        <ul class="dropdown">
-                            <li><a href="france.html">Paris</a></li>
-                            <li><a href="france.html">Lyon</a></li>
-                            <li><a href="france.html">Bordeaux</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="japon.html">Japon</a>
-                        <ul class="dropdown">
-                            <li><a href="japon.html">Tokyo</a></li>
-                            <li><a href="japon.html">Kyoto</a></li>
-                            <li><a href="japon.html">Osaka</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <a class="logo" href="index.html" aria-label="Accueil">
-                <img src="images/logoEDSG.png" alt="Logo">
-            </a>
-            <nav class="nav-right">
-                <ul>
-                    <li class="has-dropdown">
-                        <a href="usa.html">Usa</a>
-                        <ul class="dropdown">
-                            <li><a href="usa.html">New York</a></li>
-                            <li><a href="usa.html">Los Angeles</a></li>
-                            <li><a href="usa.html">Chicago</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="russie.html">Russie</a>
-                        <ul class="dropdown">
-                            <li><a href="russie.html">Moscou</a></li>
-                            <li><a href="russie.html">Saint-Pétersbourg</a></li>
-                            <li><a href="russie.html">Novossibirsk</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="pays.html">Inconnu</a>
-                        <ul class="dropdown">
-                            <li><a href="pays.html">Lieu1</a></li>
-                            <li><a href="pays.html">Lieu2</a></li>
-                            <li><a href="pays.html">Lieu3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+      <div class="header-bar">
+        <nav class="nav-left">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="has-dropdown">
+              <a href="france.html">France</a>
+              <ul class="dropdown">
+                <li><a href="france.html">Paris</a></li>
+                <li><a href="france.html">Lyon</a></li>
+                <li><a href="france.html">Bordeaux</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="japon.html">Japon</a>
+              <ul class="dropdown">
+                <li><a href="japon.html">Tokyo</a></li>
+                <li><a href="japon.html">Kyoto</a></li>
+                <li><a href="japon.html">Osaka</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <a class="logo" href="index.html" aria-label="Accueil">
+          <img src="images/logoEDSG.png" alt="Logo" />
+        </a>
+        <nav class="nav-right">
+          <ul>
+            <li class="has-dropdown">
+              <a href="usa.html">Usa</a>
+              <ul class="dropdown">
+                <li><a href="usa.html">New York</a></li>
+                <li><a href="usa.html">Los Angeles</a></li>
+                <li><a href="usa.html">Chicago</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="russie.html">Russie</a>
+              <ul class="dropdown">
+                <li><a href="russie.html">Moscou</a></li>
+                <li><a href="russie.html">Saint-Pétersbourg</a></li>
+                <li><a href="russie.html">Novossibirsk</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="pays.html">Inconnu</a>
+              <ul class="dropdown">
+                <li><a href="pays.html">Lieu1</a></li>
+                <li><a href="pays.html">Lieu2</a></li>
+                <li><a href="pays.html">Lieu3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <!-- MAIN -->
+
+    <main>
+      <!-- Intro -->
+      <section class="intro">
+        <div class="overlay">
+          <h2>Bienvenue en Russie</h2>
+          <p>
+            La Russie est un pays fascinant, à cheval entre l’Europe et l’Asie.
+            De Moscou à la Sibérie, ses paysages, ses villes et sa culture ne
+            cessent de surprendre les voyageurs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Les villes -->
+      <section class="villes">
+        <h2>Les 3 plus grandes villes de Russie</h2>
+        <div class="ville-container">
+          <!-- Moscou -->
+          <article class="ville">
+            <img src="images/GC_Blason_Moscou.svg" alt="Blason Moscou" />
+            <h3>Moscou</h3>
+            <p>
+              Capitale de la Russie et cœur politique, Moscou est connue pour la
+              Place Rouge, le Kremlin et ses gratte-ciel modernes.
+            </p>
+            <ul>
+              <li>Kremlin</li>
+              <li>Place Rouge</li>
+              <li>Théâtre Bolchoï</li>
+            </ul>
+          </article>
+
+          <!-- Saint-Pétersbourg -->
+          <article class="ville">
+            <img
+              src="images/GC_Blason_Saint-Petersbourg.svg"
+              alt="Blason Saint-Pétersbourg"
+            />
+            <h3>Saint-Pétersbourg <tittle>Санкт-Петербург</tittle></h3>
+            <p>
+              Fondée par Pierre le Grand, la “Venise du Nord” est célèbre pour
+              ses canaux, ses palais et le musée de l’Ermitage.
+            </p>
+            <ul>
+              <li>Musée de l’Ermitage</li>
+              <li>Palais d’Hiver</li>
+              <li>Forteresse Pierre-et-Paul</li>
+            </ul>
+          </article>
+
+          <!-- Novossibirsk -->
+          <article class="ville">
+            <img
+              src="images/GC_Blason_Novossibirsk.svg"
+              alt="Blason Novossibirsk"
+            />
+            <h3>Novossibirsk</h3>
+            <p>
+              Troisième ville de Russie, au cœur de la Sibérie, connue pour son
+              théâtre d’opéra et son importance scientifique.
+            </p>
+            <ul>
+              <li>Théâtre d’Opéra et de Ballet</li>
+              <li>Zoo de Novossibirsk</li>
+              <li>Académie des sciences de Sibérie</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Tableau comparatif -->
+      <section class="comparatif">
+        <h2>Comparatif des grandes villes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Ville</th>
+              <th>Population (approx.)</th>
+              <th>Surnom</th>
+              <th>Monuments phares</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moscou</td>
+              <td>12,6 millions</td>
+              <td>La Troisième Rome</td>
+              <td>Kremlin, Place Rouge</td>
+            </tr>
+            <tr>
+              <td>Saint-Pétersbourg</td>
+              <td>5,4 millions</td>
+              <td>Venise du Nord</td>
+              <td>Ermitage, Palais d’Hiver</td>
+            </tr>
+            <tr>
+              <td>Novossibirsk</td>
+              <td>1,6 million</td>
+              <td>Capitale de la Sibérie</td>
+              <td>Théâtre d’Opéra, Zoo</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Culture et gastronomie -->
+      <section class="culture">
+        <h2>Culture et gastronomie russe</h2>
+        <p>
+          La Russie est réputée pour son riche héritage culturel et sa
+          gastronomie réconfortante. Parmi les plats typiques :
+        </p>
+        <ul>
+          <li>Bortsch (soupe à la betterave)</li>
+          <li>Pelmeni (raviolis russes)</li>
+          <li>Pirojki (petits pains fourrés)</li>
+        </ul>
+      </section>
+
+      <!-- Formulaire -->
+      <section class="formulaire">
+        <h2>Et vous ?</h2>
+        <form>
+          <label for="ville">Quelle ville russe aimeriez-vous visiter ?</label>
+          <select id="ville" name="ville">
+            <option value="moscou">Moscou</option>
+            <option value="saint-petersbourg">Saint-Pétersbourg</option>
+            <option value="novossibirsk">Novossibirsk</option>
+          </select>
+          <br /><br />
+          <input type="text" placeholder="Votre nom" />
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
 
     <section>
-
-        <article>
-
-        </article>
-
+      <article></article>
     </section>
-
 
     <!-- FOOTER-->
     <footer>
-        <div class="footer-left">
-            <a href="https://github.com/enzo-cys" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://github.com/dylan-blanc" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://github.com/sylvain-malbon" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://github.com/geoffrey-carpentier" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://github.com/philippe-jodar" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        </div>
-        <div class="footer-center fan-links"></div>
-        <div class="footer-right social-icons">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
+      <div class="footer-left">
+        <a href="https://github.com/enzo-cys" class="btn-github" target="_blank"
+          ><i class="fab fa-github"></i> Enzo Cys</a
+        >
+        <a
+          href="https://github.com/dylan-blanc"
+          class="btn-github"
+          target="_blank"
+          ><i class="fab fa-github"></i> Dylan Blanc</a
+        >
+        <a
+          href="https://github.com/sylvain-malbon"
+          class="btn-github"
+          target="_blank"
+          ><i class="fab fa-github"></i> Sylvain Malbon</a
+        >
+        <a
+          href="https://github.com/geoffrey-carpentier"
+          class="btn-github"
+          target="_blank"
+          ><i class="fab fa-github"></i> Geoffrey Carpentier</a
+        >
+        <a
+          href="https://github.com/philippe-jodar"
+          class="btn-github"
+          target="_blank"
+          ><i class="fab fa-github"></i> Philippe Jodar</a
+        >
+      </div>
+      <div class="footer-center fan-links"></div>
+      <div class="footer-right social-icons">
+        <a href="https://www.facebook.com" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+      </div>
     </footer>
 
     <script>
-    // Carousel JS
-    document.addEventListener('DOMContentLoaded', function() {
-        const items = document.querySelectorAll('.carousel-item');
+      // Carousel JS
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".carousel-item");
         let current = 0;
 
         function showItem(index) {
-            items.forEach((item, i) => {
-                item.classList.toggle('active', i === index);
-            });
+          items.forEach((item, i) => {
+            item.classList.toggle("active", i === index);
+          });
         }
 
-        document.getElementById('nextBtn').onclick = function() {
-            current = (current + 1) % items.length;
-            showItem(current);
-        }
-        document.getElementById('prevBtn').onclick = function() {
-            current = (current - 1 + items.length) % items.length;
-            showItem(current);
-        }
+        document.getElementById("nextBtn").onclick = function () {
+          current = (current + 1) % items.length;
+          showItem(current);
+        };
+        document.getElementById("prevBtn").onclick = function () {
+          current = (current - 1 + items.length) % items.length;
+          showItem(current);
+        };
 
         // Optionnel : Swipe mobile
         let startX = null;
-        const carouselInner = document.querySelector('.carousel-inner');
-        carouselInner.addEventListener('touchstart', e => {startX = e.touches[0].clientX;});
-        carouselInner.addEventListener('touchend', e => {
-            if(startX !== null) {
-                let delta = e.changedTouches[0].clientX - startX;
-                if (delta < -50) document.getElementById('nextBtn').click();
-                else if (delta > 50) document.getElementById('prevBtn').click();
-                startX = null;
-            }
+        const carouselInner = document.querySelector(".carousel-inner");
+        carouselInner.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+        });
+        carouselInner.addEventListener("touchend", (e) => {
+          if (startX !== null) {
+            let delta = e.changedTouches[0].clientX - startX;
+            if (delta < -50) document.getElementById("nextBtn").click();
+            else if (delta > 50) document.getElementById("prevBtn").click();
+            startX = null;
+          }
         });
 
         // Formulaire alert
-        document.querySelector('.contact-form').onsubmit = function(e){
-            e.preventDefault();
-            alert('Merci pour votre message !');
-            this.reset();
-        }
-    });
+        document.querySelector(".contact-form").onsubmit = function (e) {
+          e.preventDefault();
+          alert("Merci pour votre message !");
+          this.reset();
+        };
+      });
     </script>
-</body>
+  </body>
 </html>

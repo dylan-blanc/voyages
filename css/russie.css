@@ -1,47 +1,120 @@
-/* russie.css - Styles de base pour russie.html */
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f5f6fa;
-    color: #222;
-    margin: 0;
-    padding: 0;
+
+/* Introduction */
+.intro {
+    position: relative;
+    height: 80vh;
+    background: url("../images/wall-russia.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* espace pour compenser le header fixe */
 }
 
-header {
-    background-color: #2d3e50;
-    color: #fff;
-    padding: 1.5rem 0;
-    text-align: center;
-}
-
-main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #fff;
+.intro .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
-}
-
-h1, h2, h3 {
-    color: #2d3e50;
-}
-
-a {
-    color: #2980b9;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background: #2d3e50;
-    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-    font-size: 0.95rem;
+    max-width: 700px;
+}
+
+.intro h2 {
+    font-size: 2.2em;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px auto;
+    width: 100%;
+}
+
+/* Section villes */
+.villes {
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+.ville-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.ville {
+    flex: 1 1 300px;
+    /* Alternatively, use a fixed width for more control */
+    /* width: 300px; */
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.ville:hover {
+    transform: scale(1.05);
+}
+.ville img {
+    width: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+.ville h3 {
+    text-align: center;
+    color: #c0392b;
+}
+
+/* Tableau comparatif */
+.comparatif table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.comparatif th, .comparatif td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.comparatif th {
+    background: #c0392b;
+    color: white;
+}
+.comparatif tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Culture */
+.culture {
+    margin: 30px 0;
+
+}
+/* Formulaire */
+.formulaire {
+    padding: 20px;
+    background: #eef2f7;
+    border-radius: 10px;
+    text-align: center;
+}
+.formulaire select, 
+.formulaire input {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formulaire button {
+    padding: 10px 20px;
+    background: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.formulaire button:hover {
+    background: #962d22;
 }
