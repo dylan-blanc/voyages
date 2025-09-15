@@ -1,0 +1,543 @@
+:root {
+    --usa-red: #c41e3a;
+    --usa-blue: #002868;
+    --usa-white: #fff;
+    --usa-light: #f7f9fa;
+    --usa-shadow: rgba(44, 62, 80, 0.06);
+    --usa-gradient: linear-gradient(90deg, #c41e3a 0%, #002868 100%);
+    --usa-focus: #ffd700;
+    --usa-gold: #ffd700;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url("../images/pygargue.webp") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--usa-blue);
+    min-height: 100vh;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.3s;
+}
+
+/* Header styles et hero */
+header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 220px;
+    min-height: 200px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 6px 24px var(--usa-shadow);
+}
+.header-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("../images/drapeau.webp") center/cover no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+}
+.header-bar, .logo, nav {
+    position: relative;
+    z-index: 1;
+}
+.usa-hero {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+.usa-hero h1 {
+    font-size: 2.7rem;
+    color: var(--usa-white);
+    text-shadow: 0 3px 14px #00286899, 0 0 2px #c41e3a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    font-family: Georgia, serif;
+}
+.usa-hero-desc {
+    color: var(--usa-white);
+    font-size: 1.4rem;
+    margin-bottom: 1.3rem;
+    text-shadow: 0 1px 6px #002868bb;
+    font-weight: 500;
+}
+.cta-btn {
+    display: inline-block;
+    padding: 13px 32px;
+    background: var(--usa-gradient);
+    color: var(--usa-white);
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.12rem;
+    box-shadow: 0 4px 18px var(--usa-shadow);
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+.cta-btn:focus, .cta-btn:active {
+    outline: 3px solid var(--usa-focus);
+    outline-offset: 2px;
+}
+.cta-btn:hover {
+    background: linear-gradient(90deg, #002868 0%, #c41e3a 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 32px #00286844;
+}
+main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+section {
+    max-width: 1100px;
+    margin: 0 auto 44px auto;
+    background: var(--usa-light);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px var(--usa-shadow);
+    padding: 38px 34px 34px 34px;
+    position: relative;
+}
+section:not(:first-of-type) {
+    margin-top: 0;
+}
+
+/* Clichés - Myth vs Reality */
+.usa-cliches-section {
+    border-left: 8px solid var(--usa-blue);
+    border-right: 8px solid var(--usa-red);
+    margin-top: -70px;
+}
+.usa-cliches-section h2 {
+    text-align: center;
+    color: var(--usa-red);
+    font-size: 1.7rem;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 6px #fff, 0 0 2px #aaa;
+    letter-spacing: 1px;
+}
+.cliches-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+    justify-content: center;
+}
+.cliche-card {
+    background: var(--usa-white);
+    border-radius: 14px;
+    box-shadow: 0 3px 18px #00286814;
+    border: 2.2px solid var(--usa-blue);
+    min-width: 220px;
+    max-width: 340px;
+    padding: 18px 22px 13px 22px;
+    margin-bottom: 14px;
+    transition: transform 0.14s, box-shadow 0.14s;
+}
+.cliche-card:not(:last-child) {
+    margin-right: 0;
+}
+.cliche-card h3 {
+    color: var(--usa-blue);
+    font-size: 1.18rem;
+    margin-bottom: 12px;
+    text-align: left;
+}
+.cliche-card p {
+    margin-bottom: 7px;
+    font-size: 1.05rem;
+    color: #333;
+    text-align: left;
+    line-height: 1.55;
+}
+.myth {
+    color: var(--usa-red);
+    font-weight: 600;
+}
+.reality {
+    color: var(--usa-blue);
+    font-weight: 600;
+}
+
+/* Stats */
+.usa-stats-section {
+    background: var(--usa-white);
+    border: 2.5px solid var(--usa-blue);
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+.usa-stats-section h2 {
+    color: var(--usa-blue);
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.42rem;
+    letter-spacing: 1px;
+    font-family: Georgia, serif;
+}
+.stats-grid {
+    display: flex;
+    gap: 27px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+.stat-card {
+    background: var(--usa-light);
+    border-radius: 12px;
+    border: 2px solid var(--usa-red);
+    min-width: 150px;
+    max-width: 210px;
+    padding: 22px 10px 12px 10px;
+    box-shadow: 0 2px 10px #00286812;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--usa-blue);
+    margin-bottom: 11px;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+.stat-card .stat-desc {
+    font-size: 1.03rem;
+    color: #444;
+    text-align: center;
+    line-height: 1.3;
+}
+.usa-funfacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.funfact {
+    background: linear-gradient(90deg, #c41e3a1c 0%, #00286811 100%);
+    border-radius: 10px;
+    padding: 9px 18px;
+    color: var(--usa-blue);
+    font-size: 1.05rem;
+    border-left: 5px solid var(--usa-blue);
+    box-shadow: 0 2px 8px #c41e3a19;
+}
+
+/* Quiz */
+.usa-quiz-section {
+    background: var(--usa-white);
+    border: 2.5px solid var(--usa-red);
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+.usa-quiz-section h2 {
+    color: var(--usa-red);
+    font-size: 1.34rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.usa-quiz-static {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 540px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.quiz-question {
+    margin-bottom: 0;
+    padding: 17px 17px 17px 17px;
+    background: #f7f9fa;
+    border-radius: 8px;
+    border-left: 5px solid var(--usa-blue);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    box-shadow: 0 1px 7px #00286816;
+}
+.quiz-question .question-label {
+    font-weight: 600;
+    display: block;
+    color: var(--usa-blue);
+    margin-bottom: 2px;
+    font-size: 1.12rem;
+}
+.quiz-answer {
+    color: var(--usa-red);
+    font-size: 1.09rem;
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+/* Cities */
+.usa-cities-section {
+    border-top: 7px solid var(--usa-blue);
+    border-bottom: 7px solid var(--usa-red);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.usa-cities-section h2 {
+    color: var(--usa-blue);
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 34px;
+    letter-spacing: 1px;
+    font-family: Georgia, serif;
+}
+.cities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    justify-content: center;
+}
+.ville-card {
+    background: var(--usa-white);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px #00286819;
+    border: 2.5px solid var(--usa-blue);
+    max-width: 340px;
+    min-width: 230px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 8px;
+}
+.ville-card img {
+    width: 100%;
+    max-width: 290px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 0;
+    border-bottom: 3px solid #c41e3a33;
+}
+.ville-info {
+    padding: 22px 18px 16px 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.ville-nom {
+    color: var(--usa-blue);
+    font-size: 1.35rem;
+    font-family: Georgia, serif;
+    text-align: center;
+    margin-bottom: 7px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--usa-blue), var(--usa-gold) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.ville-liste {
+    margin: 0;
+    padding-left: 18px;
+    text-align: left;
+    color: #333;
+    font-size: 1.07rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: disc inside;
+}
+.ville-funfact {
+    margin-top: 12px;
+    background: #f7f9fa;
+    border-left: 5px solid var(--usa-red);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 1.04rem;
+    color: #175288;
+    text-align: left;
+    width: 100%;
+    box-shadow: 0 1px 6px #00286811;
+    font-style: italic;
+}
+.ville-funfact span {
+    color: var(--usa-red);
+    font-weight: 700;
+    font-style: normal;
+    margin-right: 4px;
+}
+
+/* Footer */
+footer {
+    font-size: 1.1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: var(--usa-gradient);
+    color: var(--usa-white);
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 -2px 18px #00286812;
+    margin-top: 0;
+    height: 70px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    opacity: 1 !important;
+    background-blend-mode: normal !important;
+}
+.footer-left, .footer-center, .footer-right {
+    background: none !important;
+    opacity: 1 !important;
+}
+.btn-github {
+    display: inline-block;
+    padding: 9px 16px;
+    background: var(--usa-blue);
+    color: var(--usa-white);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid var(--usa-white);
+    transition: 0.3s;
+    font-size: 1rem;
+    margin-right: 7px;
+}
+.btn-github:hover, .btn-github:focus {
+    background: var(--usa-red);
+    color: #fff;
+    border-color: var(--usa-blue);
+    outline: 3px solid var(--usa-focus);
+}
+.footer-center {
+    justify-content: center;
+    flex: 1;
+}
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    flex: 1;
+    justify-content: flex-end;
+    padding-right: 18px;
+}
+.footer-right a {
+    color: var(--usa-white);
+    font-size: 1.5rem;
+    margin-left: 0;
+    transition: 0.3s;
+}
+.footer-right a:hover, .footer-right a:focus {
+    color: var(--usa-focus);
+    transform: scale(1.22);
+    outline: none;
+}
+
+/* Focus & Accessibility */
+a:focus, button:focus, input:focus {
+    outline: 3px solid var(--usa-focus);
+    outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    section {
+        padding: 30px 10vw 27px 10vw;
+    }
+    .usa-hero {
+        max-width: 96vw;
+    }
+}
+@media (max-width: 900px) {
+    .cities-grid, .stats-grid, .cliches-card-container, .usa-quiz-static {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .ville-card, .cliche-card, .stat-card, .quiz-question {
+        max-width: 95vw;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        height: 180px;
+        min-height: 150px;
+    }
+    .usa-hero h1 {
+        font-size: 2.1rem;
+    }
+    section {
+        padding: 22px 4vw 18px 4vw;
+    }
+    .stat-card, .cliche-card, .ville-card, .quiz-question {
+        min-width: 220px;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        height: 135px;
+        min-height: 110px;
+    }
+    .usa-hero h1 { font-size: 1.3rem; }
+    .usa-hero-desc { font-size: 1.1rem; }
+    section {
+        padding: 13px 1.7vw 10px 1.7vw;
+    }
+    .stat-card, .cliche-card, .ville-card, .quiz-question {
+        min-width: 90vw;
+        padding: 14px 4vw;
+    }
+}
+
+/* High-contrast mode support */
+@media (prefers-contrast: more) {
+    body::before {
+        background: #fff !important;
+    }
+    .stat-card, .cliche-card, .ville-card, .quiz-question {
+        border-color: #000 !important;
+    }
+    .stat-value, .ville-info h3, .usa-cities-section h2, .cta-btn, .usa-hero h1 {
+        color: #000 !important;
+    }
+    .btn-github {
+        background: #000 !important;
+        color: #fff !important;
+        border-color: #fff !important;
+    }
+}
