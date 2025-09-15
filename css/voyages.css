@@ -44,8 +44,8 @@ header {
     gap: 16px;
 }
 
-.nav-left > ul,
-.nav-right > ul {
+.nav-left>ul,
+.nav-right>ul {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -108,7 +108,7 @@ header a {
     border-radius: 8px;
     min-width: 180px;
     padding: 6px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     z-index: 1001;
 }
 .has-dropdown:hover .dropdown { display: block; }
@@ -127,6 +127,7 @@ section:first-of-type {
 }
 
 @media (max-width: 700px) {
+
     .header-bar {
         grid-template-columns: 1fr auto 1fr;
         padding: 0 8px;
@@ -136,11 +137,19 @@ section:first-of-type {
         height: 100px;
     }
     .logo img {
-        height: 70px;
+        height: 80px;
+        width: auto;
+        max-width: 120px;
     }
     .nav-left ul,
     .nav-right ul {
-        gap: 8px;
+        gap: 0px;
+    }
+
+    .nav-left,
+    .nav-right {
+        font-size: 0.5em;
+
     }
 }
 

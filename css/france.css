@@ -1,0 +1,180 @@
+/* *******************************************************HEADER****************************************************************** */
+
+
+.logo img {
+    height: 70px;
+    width: auto;
+    max-width: 250px;
+}
+
+header {
+    background: radial-gradient(circle, #002654 0% 8%, white 8% 16%, #ce1126 16% 24%, transparent 20%);
+    z-index: 1000;
+    position: static !important;
+}
+
+.nav-left a,
+.nav-right a {
+    color: black;
+
+}
+
+/* **********************************************************Intro****************************************************************** */
+
+.intro {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box;
+    color: black;
+    font-size : 2rem;
+}
+
+
+/* ***********************************************************GRID****************************************************************** */
+
+/* Grille 3 colonnes x 3 lignes */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+/* Carte avec zone de texte au-dessus */
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: #111827;
+    min-height: 48px;
+    /* de la place pour du texte */
+    text-align: center;
+}
+
+/* Carrousel */
+.carousel {
+    position: relative;
+    outline: none;
+    /* focus visible sur boutons */
+}
+
+.carousel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.carousel .nav.prev {
+    left: 8px;
+}
+
+.carousel .nav.next {
+    right: 8px;
+}
+
+.carousel .nav:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel .nav:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Responsive: 2 colonnes puis 1 colonne */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel img {
+        height: 180px;
+    }
+}
+
+/* *************************************************VIGNETTES********************************************************** */
+
+/* nouvelle règle : aligner les images horizontalement */
+.vignetteplage {
+    display: flex;
+    gap: 8px;
+}
+
+/* wrapper de la vignette pour faciliter le ciblage */
+.vignetteplage .plage1 {
+    display: flex;
+    flex-direction: column; /* empile image puis texte */
+}
+
+/* règle existante — si vous préférez, ajustez ou supprimez */
+.vignettewrapper {
+    height: 500px;
+}
+
+.vignettewrapper img {
+    width: 150px;
+    height: 300px;
+}
+
+/* texte masqué par défaut, positionné sous l'image */
+.textvignette {
+    display: none;
+    flex-direction: column;
+    max-width: 120px;
+    color: #111827;
+    pointer-events: none;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    text-align: center;
+    padding-left: 25px;
+}
+
+/* n'affiche .textplage que quand l'image de la même .plage1 est survolée */
+.vignette:has(> div:first-child img:hover) .textvignette {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* *************************************************FOOTER********************************************************** */
+
+
+footer {
+    border-top: black 2px solid !important;
+}
