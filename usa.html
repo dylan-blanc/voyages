@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Découvrez l'Amérique</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/voyages.css" rel="stylesheet" importance="low">
+    <link href="css/usa.css" rel="stylesheet importance="high"">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="header-bg"></div>
+        <div class="header-bar">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="has-dropdown">
+                        <a href="france.html">France</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">Lyon</a></li>
+                            <li><a href="#">Bordeaux</a></li>
+                        </ul>
+                    <li class="has-dropdown">
+                        <a href="japon.html">Japon</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Tokyo</a></li>
+                            <li><a href="#">Kyoto</a></li>
+                            <li><a href="#">Osaka</a></li>
+                        </ul>
+                </ul>
+            </nav>
+
+            <a class="logo" href="index.html" aria-label="Accueil">
+                <img src="images/logoEDSG.png" alt="Logo">
+            </a>
+            <nav class="nav-right">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="usa.html">Usa</a>
+                        <ul class="dropdown">
+                            <li><a href="#newyork">New York</a></li>
+                            <li><a href="#losangeles">Los Angeles</a></li>
+                            <li><a href="#chicago">Chicago</a></li>
+                        </ul>
+                    <li class="has-dropdown">
+                        <a href="russie.html">Russie</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Moscou</a></li>
+                            <li><a href="#">Saint-Pétersbourg</a></li>
+                            <li><a href="#">Novosibirsk</a></li>
+                        </ul>
+                    <li class="has-dropdown">
+                        <a href="pays.html">Inconnu</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Lieu1</a></li>
+                            <li><a href="#">Lieu2</a></li>
+                            <li><a href="#">Lieu3</a></li>
+                        </ul>
+                </ul>
+            </nav>
+        </div>
+        <div class="usa-hero">
+            <h1>Découvrez l'Amérique</h1>
+            <p class="usa-hero-desc">Bienvenue au pays de la liberté</p>
+            <a href="#quiz" class="cta-btn">Testez vos connaissances</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="usa-cliches-section">
+            <h2>Myth vs Reality : Les Clichés Américains</h2>
+            <div class="cliches-card-container">
+                <div class="cliche-card">
+                    <h3>Burger & Fast Food</h3>
+                    <p><span class="myth">Mythe :</span> Les Américains mangent uniquement des burgers géants.</p>
+                    <p><span class="reality">Réalité :</span> Une cuisine multiculturelle, des marchés bio et des chefs renommés !</p>
+                </div>
+                <div class="cliche-card">
+                    <h3>Route 66 & Road Trips</h3>
+                    <p><span class="myth">Mythe :</span> Tout le monde fait la Route 66 en décapotable.</p>
+                    <p><span class="reality">Réalité :</span> Des transports variés et des paysages urbains ou sauvages à découvrir.</p>
+                </div>
+                <div class="cliche-card">
+                    <h3>Sports & Cheerleaders</h3>
+                    <p><span class="myth">Mythe :</span> Le football américain et les pom-pom girls sont partout.</p>
+                    <p><span class="reality">Réalité :</span> Une passion pour de nombreux sports : basket, baseball, soccer, etc.</p>
+                </div>
+                <div class="cliche-card">
+                    <h3>Hollywood & Stars</h3>
+                    <p><span class="myth">Mythe :</span> On croise des célébrités à chaque coin de rue.</p>
+                    <p><span class="reality">Réalité :</span> Des villes riches culturellement où chacun peut briller à sa façon.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="usa-stats-section">
+            <h2>USA Fun Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">331</span>
+                    <span class="stat-desc">Millions d'habitants</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">50</span>
+                    <span class="stat-desc">États à explorer</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">9 834 000</span>
+                    <span class="stat-desc">km² de superficie</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">43 000</span>
+                    <span class="stat-desc">Fast food restaurants (McDonald's)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">800</span>
+                    <span class="stat-desc">Langues différentes parlées à New York</span>
+                </div>
+            </div>
+            <div class="usa-funfacts">
+                <div class="funfact">
+                    <b>Fun fact :</b> 4 États américains commencent par « New » : New York, New Jersey, New Mexico, New Hampshire.
+                </div>
+                <div class="funfact">
+                    <b>Fun fact :</b> Le chewing-gum moderne a été inventé à Chicago en 1891.
+                </div>
+            </div>
+        </section>
+
+        <section class="usa-quiz-section" id="quiz">
+            <h2>Testez vos connaissances sur les USA</h2>
+            <div class="usa-quiz-static">
+                <div class="quiz-question">
+                    <span class="question-label">Quel est l’État le plus peuplé ?</span>
+                    <span class="quiz-answer">Réponse : <b>Californie</b></span>
+                </div>
+                <div class="quiz-question">
+                    <span class="question-label">Combien d’États portent le mot « New » ?</span>
+                    <span class="quiz-answer">Réponse : <b>4</b> (New York, New Jersey, New Mexico, New Hampshire)</span>
+                </div>
+                <div class="quiz-question">
+                    <span class="question-label">Quelle ville est surnommée « Sin City » ?</span>
+                    <span class="quiz-answer">Réponse : <b>Las Vegas</b></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="usa-cities-section">
+            <h2>Les Villes Incontournables</h2>
+            <div class="cities-grid">
+                <article id="newyork" class="ville-card">
+                    <img src="images/newyork.jpg" alt="New York">
+                    <div class="ville-info">
+                        <h3 class="ville-nom">New York</h3>
+                        <ul class="ville-liste">
+                            <li>La ville qui ne dort jamais, gratte-ciels et taxis jaunes</li>
+                            <li>Central Park, Broadway, Times Square</li>
+                        </ul>
+                        <div class="ville-funfact">
+                            <span>Fun fact :</span> Plus de 800 langues y sont parlées, un record mondial.
+                        </div>
+                    </div>
+                </article>
+                <article id="losangeles" class="ville-card">
+                    <img src="images/losangeles.jpg" alt="Los Angeles">
+                    <div class="ville-info">
+                        <h3 class="ville-nom">Los Angeles</h3>
+                        <ul class="ville-liste">
+                            <li>Soleil, plages, palmiers et stars de cinéma</li>
+                            <li>Hollywood Boulevard, Venice Beach</li>
+                        </ul>
+                        <div class="ville-funfact">
+                            <span>Fun fact :</span> Plus de 300 musées, un record aux États-Unis.
+                        </div>
+                    </div>
+                </article>
+                <article id="chicago" class="ville-card">
+                    <img src="images/chicago.jpg" alt="Chicago">
+                    <div class="ville-info">
+                        <h3 class="ville-nom">Chicago</h3>
+                        <ul class="ville-liste">
+                            <li>Ville du vent, jazz, gratte-ciels, pizza deep-dish</li>
+                            <li>Architecture et ambiance urbaine unique</li>
+                        </ul>
+                        <div class="ville-funfact">
+                            <span>Fun fact :</span> Le chewing-gum moderne a été inventé à Chicago en 1891.
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <a href="https://github.com/enzo-cys" class="btn-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.usa.gov/" class="btn-github" target="_blank" rel="noopener">Site officiel USA.gov</a>
+            <a href="https://travel.state.gov/" class="btn-github" target="_blank" rel="noopener">U.S. Travel Info</a>
+            <a href="https://www.visittheusa.fr/" class="btn-github" target="_blank" rel="noopener">Visit The USA</a>
+        </div>
+        <div class="footer-center fan-links"></div>
+        <div class="footer-right social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
