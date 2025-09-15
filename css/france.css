@@ -142,6 +142,10 @@ header {
 }
 
 /* règle existante — si vous préférez, ajustez ou supprimez */
+.vignettewrapper {
+    height: 500px;
+}
+
 .vignettewrapper img {
     width: 150px;
     height: 300px;
@@ -166,4 +170,11 @@ header {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+/* *************************************************FOOTER********************************************************** */
+
+
+footer {
+    border-top: black 2px solid !important;
 }
